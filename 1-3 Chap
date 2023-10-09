@@ -1,0 +1,1033 @@
+   “Our civilization runs on software” (Bjarne Stroustrup,  C++ programming creator)
+    “Every business is a software business” – Watts Humphrey
+	Software touches many aspects of our everyday lives – found in something simple and in very complex systems
+	Software needs to 
+	Provide the required capacity
+	Be available when needed
+	Get delivered on schedule at acceptable price
+	Be of sufficient quality (e.g., minimize rework)
+	These characteristics are directly impact the software requirements development and architecture
+   “Our civilization runs on software” (Bjarne Stroustrup,  C++ programming creator)
+    “Every business is a software business” – Watts Humphrey
+	Software touches many aspects of our everyday lives – found in something simple and in very complex systems
+	Software needs to 
+	Provide the required capacity
+	Be available when needed
+	Get delivered on schedule at acceptable price
+	Be of sufficient quality (e.g., minimize rework)
+	These characteristics are directly impact the software requirements development and architecture
+	Cannot build or support successful product without having clear requirements
+	Mars Climate Orbiter mishap due to unclear requirements (pound-seconds vs Newton-seconds). The spacecraft went into orbital insertion, due to ground-based computer software which produced output in non-SI units of pound-seconds (lbf×s) instead of the metric units of newton-seconds (N×s) specified in the contract between NASA and Lockheed. The spacecraft encountered Mars on a trajectory that brought it too close to the planet, causing it to pass through the upper atmosphere and disintegrate. (Wikipedia)
+	Each requirement and requirements change represents an element of cost
+	Must be designed, coded, integrated, tested
+	Cost-Value Approach used to determine for each individual candidate requirement what the cost of implementing the requirement would be and how much value requirement has
+	Each requirement represents an element of risk. Why?
+	Measures to mitigate risks represent costs
+	Initial development is only 40% of software cost (Pigowski)
+	Other 60% is post-development rework
+	Requirements errors can account for 70 to
+85 percent of the rework cost (Leffingwell 1997)
+	Rework Categories  (Swanson)
+	Corrective (defect-fixes)
+	Adaptive (new or modified requirements)
+	Perfective (“enhancements”)
+	Need to reduce corrective and perfective rework expenses, both during development and post-delivery
+	Architect the system to be modifiable/adaptable 
+	Customer generally pays for adaptive rework (e.g., new feature, new environment)
+	Some people mistakenly believe that time spent discussing requirements simply delays delivery
+	Investing in good requirements will always return more than it costs
+	The potential payoff includes:
+	Fewer defects in requirements and in the delivered product.
+	Reduced development rework
+	Faster development and delivery
+	Fewer unnecessary and unused features
+	Fewer miscommunications
+	Higher customer and team member satisfaction
+	Products that do what they’re supposed to do
+	Customer and Users
+	Enterprise Architecture Principles
+	buy rather than build, separation of concerns
+	Human Machine Interface (HMI)
+	look and feel, computer OS, hand tools, GUI, web-based user interfaces, touch screens, voice user interfaces
+	External System Interfaces
+	Business Rules
+	Human Factors
+	ergonomics –design of machines, environments (safety, comfort, productiveness of human users)
+	Change Requests (CRs)
+Discussion: provide some examples
+	Laws and Regulations
+	Standards
+	encryption (SSL/TLS), OS (Linux), storage (RAID), network (Ethernet, TCP/IP)
+	Third-party products 
+	Laws of Physics
+	Experience 
+	Engineering judgment
+	Vision
+	Requirement is an “overloaded” term
+1. Functional requirements 
+	Describe the behaviors (functions or services) of the system that support user goals, tasks, or activities (Malan 2001)
+ 
+	Present what the system should do 
+	Functional requirements often are written in the form of the traditional “Shall” or “Must” statements
+	[SN-004] The system shall update its current position and velocity upon receipt of valid Position Velocity Messages.
+	The Passenger shall be able to print boarding passes for all flight segments for which he has checked in.
+2. Non-functional requirements :
+	specify with what quality (performance, scalability, etc.) the system should work
+	A possible non-functional requirement for an online order system is that the response on an action of the customer should be given within less than a certain maximum time.
+	When the user accesses any screen, it shall display on the monitor within 2 seconds.
+	The system shall [SN-0026] be able to generate Navigation Display Update messages indicating the vehicle’s current position 99.9999% (“6 nines”) of the time the vehicle is operating.
+	Specify  the constraints -  the limits/restrictions within the system should be realized
+	For an online order system, a constraint could be that it should work with both Firefox and Chrome, without the need for a plugin.
+	The system must deploy on Microsoft Windows.
+	Business requirement – A high-level business objective of the organization that builds a product or of a customer who procures/requests it
+	Business requirements describe 
+	why the organization is implementing the system
+	the business benefits the organization hopes to achieve
+	Example: An airline wants to reduce airport counter staff costs by 25 percent. This goal might lead to the idea of building a kiosk that passengers can use to check in for their flights at the airport. 
+	Business requirements typically come from the funding sponsor for a project, the acquiring customer, the manager of the actual users, the marketing department, or a product visionary. 
+	Business requirements are recorded in a vision and scope document.
+	Other strategic guiding documents sometimes used for this purpose include a project charter, business case, and market (or marketing) requirements document. 
+	Specifying business requirements is the subject of Chapter 5
+	 
+	User requirement – describes a goal or task that specific classes of users must be able to perform with a system, or a desired product attribute  that will provide value to users
+	User requirements describe what the user will be able to do with the system 
+	Ways to represent user requirements include 
+	use cases – Example, “Check in for a flight” using an airline’s website or a kiosk at the airport. 
+	user stories - “As a passenger, I want to check in for a flight so I can board my airplane.” 
+	event-response tables
+	It’s important to remember that most projects have multiple user classes, as well as other stakeholders whose needs also must be elicited. 
+	Chapter 8, “Understanding user requirements,” addresses this level of the model
+	System requirement – describe the requirements for a product that is composed of multiple components or subsystems (ISO/IEC/IEEE 2011)
+	A system can be 
+	all software
+	or it can include both software and hardware subsystems
+	People and processes are part of a system, too, so certain system functions might be allocated to human beings. 
+	A good example of a “system” is the cashier’s workstation in a supermarket. 
+	There’s a bar code scanner integrated with a scale and a hand-held bar code scanner
+	The cashier has a keyboard, a display, and a cash drawer
+	A card reader and PIN pad for the loyalty card and credit or debit card
+	Printers for  purchase receipt, credit card receipt, and coupons
+	 These hardware devices are all interacting under software control. 
+	The requirements for the system or product as a whole, then, lead the business analyst to derive specific functionality that must be allocated/flowed down to those component subsystems and the interfaces between them
+Other types of requirements information
+	Data requirement definition - establishes the process used to identify, prioritize, precisely formulate, and validate the data needed to achieve business objectives. Customers are presenting a data requirement whenever they describe the format, data type, allowed values, or default value for a data element (Chapter 13)
+	External interface requirement - A description of a connection between a software system and a user, another software system, or a hardware device (Chapter 10)
+	Software requirements include three distinct levels: 
+	business requirements
+	user requirements
+	functional requirements
+	Every system has an assortment of nonfunctional requirements (performance, availability, reliability, security, etc.)
+	Based on an identified business need, a market need, or an exciting new product concept, managers or marketing define the business requirements for software that will help their company operate more efficiently (for information systems) or compete successfully in the marketplace (for commercial products)
+	In the corporate environment, a business analyst then typically works with user representatives to identify user requirements. 
+	Companies developing commercial products often identify a product manager to determine what features to include in the new product
+	Each user requirement and feature must align with accomplishing the business requirements 
+	From the user requirements, the BA or product manager derives the functionality that will let users achieve their goals
+	Developers use the functional and nonfunctional requirements to design solutions that implement the necessary functionality, within the limits that the constraints impose
+	Testers determine how to verify whether the requirements were correctly implemented
+	Relationships among several types of requirements information
+	Data requirements are not shown explicitly in this diagram. Functions manipulate data, so data requirements can appear throughout the three levels
+	Chapter 7, “Requirements elicitation,” contains many examples of these different types of requirements information
+	Without adequate customer involvement, the inescapable outcome at the end of the project is an expectation gap, a gulf between what customers really need and what developers deliver based on what they heard at the beginning of the project (Wiegers 1996)
+	The best way to minimize the expectation gap is to arrange frequent contact points with suitable customer representatives
+	These contact points can take the form of interviews, conversations, requirements reviews, user interface design walkthroughs, prototype evaluations, etc.
+	With agile development—user feedback on small increments of executable software 
+	Each contact point affords an opportunity to close the expectation gap: what the developer builds is more closely aligned with what the customer needs
+	Without adequate customer involvement, the inescapable outcome at the end of the project is an expectation gap, a gulf between what customers really need and what developers deliver based on what they heard at the beginning of the project (Wiegers 1996)
+	The best way to minimize the expectation gap is to arrange frequent contact points with suitable customer representatives
+	These contact points can take the form of interviews, conversations, requirements reviews, user interface design walkthroughs, prototype evaluations, etc.
+	With agile development—user feedback on small increments of executable software 
+	Each contact point affords an opportunity to close the expectation gap: what the developer builds is more closely aligned with what the customer needs
+	A stakeholder is a person, group, or organization that is actively involved in a project, is affected by its process or outcome, or can influence its process or outcome
+	Stakeholders can be internal or external to the project team and to the developing organization
+	 Figure identifies many of the potential stakeholders in these categories.
+	Customers are a subset of stakeholders. 
+	A customer is an individual or organization that derives either direct or indirect benefit from a product 
+	Software customers could request, pay for, select, specify, use, or receive the output generated by a software product. 
+	The customers shown in Figure include the direct user, indirect user, executive sponsor, procurement staff, and acquirer 
+	An excellent software product results from a well-executed design based on excellent requirements
+	Excellent requirements result from effective collaboration between developers and customers —a partnership
+	 A collaborative effort can work only 
+	when all parties involved know what they need to be successful
+	when they understand and respect what their collaborators need to be successful
+	The “Business analyst” (BA) that has primary responsibility for leading requirements-related activities on a project – typically is the point person to forge this collaborative partnership
+	The BA role also goes by many other names (requirements engineer, requirements analyst). See Chapter 4, “The business analyst,” for more about the business analyst role
+	The Requirements Bill of Rights for Software Customers in Table 2-1 of the textbook lists 10 expectations that customers can legitimately hold regarding their interactions with BAs and developers during the project’s requirements engineering activities
+	Each of these rights implies a corresponding responsibility on the part of the BAs or software developers
+	The flip side of a right is a responsibility
+	Table 2-2 lists 10 responsibilities that the customer has to BAs and developers during the requirements process
+	Users providing requirements input would expect that they’ll get what they needs
+	Reality is somewhat different
+	Architectural design is derived from the user requirements
+	“Why should we care about software architecture anyway? Sometimes a developer just wants to jump right in and start coding. Software architecture is the foundation of a software system. The foundation has a profound effect on the quality of what is built on top of it. “Joseph Ingeno
+	A gap usually happens between the architecture and implementation – architecture erosion - results in an expectation gap at the end of the project 
+	Ways to keep code, architecture, and requirements are consistent – using code templates, embedding the design in the code, frameworks, strong project management/process discipline
+	Culture clashes frequently arise when teams are working on requirements – some teams even think requirements are unnecessary
+	Developers need to get involved in requirements specification reviews – that’s way they know what’s coming and provide feedback
+	Testers are also valuable contributors to excellent requirements –
+	 They’re likely to find many ambiguities, conflicts, and concerns with the requirements as they are developing their test cases and scenarios from the requirements
+	Need a strong program/project management and process discipline to help prevent erosion and expectation gap by promoting a culture that respects requirements
+	Reaching agreement on the requirements for the product to be built, or for a specific portion of it, is at the core of the customer-developer partnership
+	Multiple parties are involved in this agreement:
+	Customers agree that the requirements address their needs
+	Developers agree that they understand the requirements and that they are feasible
+	Testers agree that the requirements are verifiable
+	Management agrees that the requirements will achieve their business objectives
+	Many organizations use the act of “signing off” on the requirements as the mark of stakeholder approval
+	Important 
+	Don’t use sign-off as a weapon
+	Treat it as a milestone, with a clear, shared understanding of the activities that lead to sign-off and its implications for future changes
+	Concept of establishing a baseline of the requirements agreement, a snapshot of it at a point in time (Wiegers 2006).
+	 A requirements baseline is a set of requirements that has been reviewed and agreed upon and serves as the basis for further development 
+	After a baseline is established, the BA should place the requirements under change control
+	This allows the team to modify scope, when necessary, in a controlled way 
+	that includes analyzing the impact of each proposed change on the schedule, cost, and other success factors
+	Agreeing on requirements on agile projects Agile projects do not include a formal sign-off action
+	There’s no attempt on an agile project to achieve stakeholder approval on the full scope of requirements for the project up front
+	In agile projects the full set of functionality is identified over time, although the vision and other business requirements do need to be established at the outset 
+	Chapter 20, “Agile projects,” discusses how requirements are handled on agile projects
+	Agile projects generally maintain requirements in the form of user stories in a product backlog
+	The product owner and the team reach agreement on what stories will be developed in the next iteration in a planning session
+	The set of stories is chosen based on their priority and the team’s velocity (productivity)
+	After that set has been established and agreed to, the stories contained in the iteration are frozen. 
+	Requested changes that come in are considered for future iterations.
+	It can be hard to achieve sign-off from all the relevant stakeholders. Barriers include :
+	logistics, busy schedules
+	people who are reluctant to commit and be held accountable later
+	If stakeholders are afraid to be able to make changes after approving the requirements, they might drag their feet on the approval
+	In such a situation, better off moving forward—cautiously— with those requirements as a baseline so as to not impede progress
+	Document the fact that certain stakeholders didn’t sign off on the requirements in the risk list, along with the likely impact of some of the requirements being missing or wrong
+	Follow up with these people as part of risk management until getting the sign-off
+
+Scrum Process
+Business Requirements
+Project Assignment
+	Scrum is one of the framework under the Agile software development. 
+	The term “Scrum” was first used by Hirotaka Takeuchi and Ikujiro Nonaka in their ground-breaking 1986 paper “ The New New Product Development Game”.
+	They borrowed the name from the game of rugby to stress the importance of teams in complex product development
+	“Scrum is a management and control process that cuts through complexity to focus on building software to meet business needs. Scrum is superimposed on top of and wraps existing engineering practices, development methodologies and standards” [Schwaber 2002]
+	Scrum is one of the framework under the Agile software development. 
+	The term “Scrum” was first used by Hirotaka Takeuchi and Ikujiro Nonaka in their ground-breaking 1986 paper “ The New New Product Development Game”.
+	They borrowed the name from the game of rugby to stress the importance of teams in complex product development
+	“Scrum is a management and control process that cuts through complexity to focus on building software to meet business needs. Scrum is superimposed on top of and wraps existing engineering practices, development methodologies and standards” [Schwaber 2002]
+	Scrum focuses on:
+	Content of an iteration (Sprint)
+	Prioritized requirements to be considered in iteration (Sprint Backlog)
+	A Short daily meeting (a Scrum meeting)
+	A major theme in Scrum is “inspect and adapt.”
+	Scrum emphasizes taking a short step of development, inspecting the resulting product  Did it meet expectations?
+	and the efficacy of current practices How can we work better or make the product better?
+	and then adapting the product goals and process practices Is this still the most valuable feature to deliver at this time?
+	                                Repeat forever!!!!!
+	In Scrum, there are three roles: 
+	Product Owner
+	Scrum Master 
+	Team 
+	Together these are known as the Scrum Team or Development Team
+	Responsible for actual doing of the work building the product (e.g. the application or website) that the Product Owner indicates :
+	Team shows work at close of an iteration or  Sprint
+	Team size of 5-9 individuals
+	Full-time, dedicated, cross-functional (i.e., each member can build and test)
+	it includes all the expertise in analysis, development, testing, interface design, database design, architecture, documentation, etc. necessary to deliver the potentially shippable product each Sprint
+	demonstrates multi-learning: each person certainly has special strengths, but also continues to learn other specialties.
+	Team-directed / Team-managed (self-managed)
+	For the class project, you will be member of a Scrum team (7 people)
+•	Responsible for maximizing return on investment (ROI) by:
+•	Identifying product features
+•	Translating these into a prioritized features list called Product Backlog
+•	Deciding which should be at the top  of the list for the next iteration or Sprint 
+•	continually re-prioritizing and refining the list.
+•	Ultimate responsibility and authority
+•	Interfaces to the customer
+•	Controls budget/Has profit/loss responsibility 
+•	Develops product vision and conveys the vision to the team
+•	Determines when a feature is done (validates product quality) 
+	Single person, not a committee
+	Be available to the team
+	For the class project, each team to designate 
+   a Product Owner
+•	Facilitates the Scrum Framework
+–	Upholds Scrum values and practices (commitment, focus, 
+     openness respect, and courage)
+–	Facilitates the Scrum Meetings
+–	Typically, not doing the  development work
+–	Helps the Team be as efficient as possible and be successful
+–	Is a coach and a teacher, NOT a manager
+–	Protects the team from outside interference (i.e., the firewall for the Team)
+–	Facilitates continuous improvement
+–	Helps remove barriers (roadblocks)
+–	There should be a dedicated full-time Scrum Master, although a smaller Team might have a team member play this role (carrying a lighter load of regular work when they do so)
+	For the class project, each team to designate a  Scrum Master
+	Self-organized
+	Entire team (including the Scrum Master) is collectively responsible for completing the work
+	Total team head count should be from 5-9 members
+	Collaborate work among team members and commit to delivery of the sprint backlog (i.e., build the product increments)
+	Team chooses their own tasking
+	Team members help each other succeed
+	Continuous attention to technical excellence and good design enhances agility  
+	Focus on communication, simplicity, feedback, and courage
+•	Participants: 
+–	Some Team members, Scrum Master, 
+     Product Owner, Stakeholders
+•	Purpose:
+–	Create initial sprint plans 
+    (typically occurs early in project planning)
+–	Helps Product Owner understand impact of estimates and schedule
+•	Output:
+–	Healthy Product Backlog 
+containing item descriptions,
+Priorities, and estimates
+	Prioritized list of everything that is needed in the product (vision)
+	Single source of product requirements
+	Always changing
+◦	Items are added, removed, and reprioritized based on value
+◦	The product is built incrementally based on worked selected from the backlog 
+	Features and requirements are tracked as stories (similar to use cases) in the Product Backlog
+	Written it from the user’s perspective
+	Sample user story structures:
+◦	As a <type of user/role>, I want <some goal/functionality>, so that <business benefit>
+◦	Given a certain situation, when this condition occurs, then this is the functionality the user will experience.
+◦	As a developer, I want a build server installed so that I can continuously integrate my software
+◦	As a customer, I want my credit card information to be stored, so that I save time when checking out.”
+	Epic: A user story covers  large amounts of functionality. 
+	An epic is generally too large for a Scrum team to complete in one Sprint, it is split into multiple smaller user stories
+	The Product Owner manages priorities of stories in the Product Backlog
+	Each story must contain a unique id, a description, priority, and estimate, and completion criteria recommended
+	The Product Owner owns the Product Backlog
+•	Participants: 
+–	Team, Scrum Master, Product Owner
+•	Purpose:
+–	Team and Product Owner discuss the product vision 
+–	Review and update the high-priority items in Product Backlog
+–	Provide the Goal for the coming Sprint
+–	Select items from Product Backlog to
+     place in Sprint Backlog
+•	Output:
+–	List of Stories the Team will be able
+     to complete during the Sprint
+–	Re-Prioritized Product Backlog 
+–	Each high priority item is a good story
+•	Participants: 
+–	The Team and Scrum Master
+•	Purpose:
+–	Break the Stories into detailed tasks for
+     how to accomplish the Sprint goal
+–	Discuss  and select the work from
+     the Product Backlog
+–	Agree on size estimates
+–	Team members choose their work (it’s not
+      assigned
+–	Make the final commitment to complete
+     by the end of Sprint
+•	Output:
+–	Sprint Backlog: Tasks are identified,
+     estimated (in hours/points), and “assigned”
+–	The Plan 
+                  For the class project, team to perform Sprint Planning Part 1/2.
+•	Daily, 15 minutes, Stand-up *
+•	Participants: 
+–	The Team, Scrum Master, Product
+    Owner
+–	Stakeholders (Listen only!)
+•	Purpose:
+–	Answer three questions:
+1.	What did I do since the last Daily Scrum?
+2.	What will I do before the next Daily Scrum?
+3.	What roadblocks stand in the way?             http://ayagebeely.blogspot.com/2009/10/stand-up-meeting.html
+–	Provide coordination mechanism for The Team
+–	Not a status or problem-solving meeting
+–	Inspect & Adapt opportunity 
+	Input:  Updated Sprint Backlog and Sprint Burndown
+	Output:  Updated Task Board & Burndown
+           * For the class project, team needs to have a Scrum Meeting on a regular basis.
+                                       SM to keep track of team member participation
+•	Plot depicting the remaining work on the Sprint
+•	Evaluates work left to be done in the Sprint on a daily basis 
+•	Indicates risk of Sprint completion failure 
+•	 Will all work assigned to the Sprint be completed by the end of the Sprint? 
+•	IBM Relational Team Concert, Atlassian Jira Software
+•	Microsoft Teams, Share Point, Excel, etc.
+•	Open Source: Trello, Icescrum. Taiga, Scrumpy, etc.
+•	Physical Task Board
+•	Contains work products of the sprint (demonstrated/reviewed during Sprint review)
+•	Must meet the “definition of done” established during  sprint planning
+•	Under configuration management control
+•	Sprint build release (engineering build)
+•	Capable of being formalized 
+•	Done after every Sprint
+•	Participants: 
+•	The Scrum Team, possibly Stakeholders and others
+•	Purpose: The whole team
+•	Evaluate what is and what is not working
+•	Discuss what they would like to  start doing/stop doing/continue doing
+•	Plan ways to improve
+•	Inspect & Adapt opportunity – for the sake of the Program
+•	Typically, 3 hours or less
+•	Output:
+•	Document lesson learned 
+•	Ways to improve as a team
+•	May be a change to process
+•	A Story/Task added to the Product
+    Backlog
+•	For the class projects, team to conduct a Sprint Retrospective after each project (or Sprint)
+•	Stories in the Product Backlog must have estimates
+•	At least the top 20% highest priority items
+•	Done during Product Planning and/or Sprint Planning I
+•	For effort estimates, a common technique is to estimate in terms of relative size (factoring in effort, complexity, risk, and uncertainty) of  a feature using a unit of “story points” or simply “points”.
+•	Select one of the smallest stories (e.g., a small piece of code of 10 SLOCs, a small test script to be written)  and give it an estimate of 1 story point
+•	Each additional story is estimated by relatively comparing to the first story or to any other that have been estimated
+•	Another common technique used in Agile/Scrum is to track how much work the team completes each Sprint
+•	Velocity is a measure of a team’s rate of progress.
+•	It is calculated by summing the number of story points that the team completed during the iteration 
+•	On a “stable” team the velocity will eventually converge on a consistent value
+•	Product Backlog estimated at 800 Story points
+•	The Team velocity per Sprint is 100 Story Points
+•	800/100 = 8 Sprints
+•	If each Sprint is 4 weeks, then we will need 32 weeks to complete the entire project
+	Used to scale Agile
+◦	When teams are > 12 members 
+◦	Scrum has been used on projects of over
+    1,000 people
+◦	Each team selects an ambassador
+	Report on  each team
+◦	Completion                                           
+◦	Next steps
+◦	roadblocks 
+◦	Resolve coordination challenges between teams
+	Scrum of scrums has its own backlog these items
+	May meet a few times per week
+	There is also a scrum of scrum of scrums!
+	Large-scale Scrum (LeSS) – LeSS is a set of rules combined with guides for applying Scrum in a multi-team context.
+	Scrum works by making visible the dysfunction and impediments that are impacting the Product Owner and the Team’s effectiveness, so that they can be addressed
+ 
+	For example, committed stories vs. delivered results
+◦	If a team commits to 100 story points at the beginning of a four-week sprint but they deliver only 80, then the team is not meeting their commitments to themselves, business, or the customer. The release will instead be put on hold and pushed to next release
+◦	To the Team, this feels like failure. But in reality, this experience is the necessary first step toward becoming more realistic and thoughtful about its forecasts (task analysis, estimation skill). 
+◦	This pattern of (Scrum helping make visible dysfunction, 
+                          enabling the Team to do something about it) 
+– is the basic mechanism that produces the most significant benefits that Teams using Scrum experience.
+
+Establish the Business Requirements
+	Business requirements represent the top of the requirements chain
+	They define the vision of the solution and the scope of the project that will implement the solution
+	The user requirements and functional requirements must align with the context and objectives that the business requirements establish
+	Requirements that don’t help the project achieve its business objectives shouldn’t be implemented
+	A project without a clearly defined and well-communicated direction invites disaster. 
+	This lecture describes the vision and scope document, a deliverable that contains the project’s business requirements
+	Business requirement – A high-level business objective of the organization that builds a product or of a customer who procures/requests it
+	Business requirements describe 
+	why the organization is implementing the system
+	the business benefits the organization hopes to achieve
+	Example: An airline wants to reduce airport counter staff costs by 25 percent. This goal might lead to the idea of building a kiosk that passengers can use to check in for their flights at the airport. 
+	Business requirements typically come from the funding sponsor for a project, the acquiring customer, the manager of the actual users, the marketing department, or a product visionary. 
+	Business requirements are recorded in a vision and scope document.
+	Other strategic guiding documents sometimes used for this purpose include a project charter, business case, and market (or marketing) requirements document.  
+	Identify desired business benefits 
+	Business requirements might come from funding sponsors, corporate executives, marketing managers, or product visionaries
+	It can be challenging to identify and communicate the business benefits
+	Team members sometimes aren’t exactly sure what the project is intended to accomplish. 
+	Sometimes, sponsors don’t want to set objectives in a measurable fashion and then be held accountable for achieving them
+	There could be multiple important stakeholders who don’t agree on what the objectives should be
+	The business analyst can ensure that the right stakeholders are setting the business requirements and facilitate elicitation, prioritization, and conflict resolution
+	Identify desired business benefits (cont.)
+	The business benefit has to represent a true value for the project’s sponsors and to the product’s customers.
+	For example, simply merging two systems into one is not a reasonable business objective. 
+	Customers don’t care if they are using an application that involves 1, 5, or even 10 systems. 
+	They care about issues like increasing revenue and decreasing costs.
+	Merging two systems might be part of the solution, but it is rarely the true business objective
+	Regulatory and legal compliance projects for software development for Banking and Telecom industry clients  also have clear business objectives
+	Often the objectives are phrased as risk avoidance, possibly to avoid getting sued or being put out of business
+	Two core business requirements elements:
+	Product vision
+	Project scope 
+	The product vision briefly and clearly describes the ultimate product that will achieve the business objectives 
+	This product could serve as the complete solution for the business requirements or as just a portion of the solution 
+	The vision describes what the product is about and what it ultimately could become. 
+	It provides the context for making decisions throughout the product’s life, and it aligns all stakeholders in a common direction
+	Examples- Amazon - To be Earth's most customer-centric company, where customers can find and discover anything they might want to buy online. 
+	Apple - To bringing the best user experience to its customers through its innovative hardware, software, and services.
+	The project scope identifies what portion of the ultimate product vision the current project or development iteration will address
+	The statement of scope draws the boundary between what’s in and what’s out for this project
+	The vision applies to the product as a whole
+	The product vision encompasses the scope for each planned release, which is less well defined the farther out you look
+	A concise vision statement that summarizes the long-term purpose and intent of the product. 
+	The vision statement should reflect a balanced view that will satisfy the expectations of diverse stakeholders
+	It can be somewhat idealistic but should be grounded in the realities of existing or anticipated markets, enterprise architectures, corporate strategic directions, and resource limitations
+	The following keyword template works well for crafting a product vision statement (Moore 2002): 
+    ■ For [target customer]
+    ■ Who [statement of the need or opportunity] 
+    ■ The [product name] 
+    ■ Is [product category] 
+    ■ That [major capabilities, key benefit, compelling reason to buy or use] 
+    ■ Unlike [primary competitive alternative, current system, current business process] 
+    ■ Our product [statement of primary differentiation and advantages of new product] 
+	Here’s a sample vision statement for the Chemical Tracking System, with the keywords in red: 
+	For scientists who need to request containers of chemicals, the Chemical Tracking System is an information system that will provide a single point of access to the chemical stockroom and to vendors. The system will store the location of every chemical container within the company, the quantity of material remaining in it, and the complete history of each container’s locations and usage. This system will save the company 25 percent on chemical costs in the first year of use by allowing the company to fully exploit chemicals that are already available within the company, dispose of fewer partially used or expired containers, and use a standard chemical purchasing process. Unlike the current manual ordering processes, our product will generate all reports required to comply with federal and state government regulations that require the reporting of chemical usage, storage, and disposal.
+	A scope definition is a structure, not a straitjacket
+	The project scope defines the concept and range of the proposed solution. It’s also important to define what will not be included in the product.
+	The business requirements and an understanding of how customers will use the product provide valuable tools for dealing with scope change
+	Scope change isn’t a bad thing if it helps you steer the project toward satisfying evolving customer needs
+	The information in the vision and scope document lets you assess whether proposed requirements are appropriate for inclusion in the project. 
+	You can modify the scope for a future iteration or for an entire project if it’s done consciously, by the right people, for the right business reasons, and with understanding and acceptance of the tradeoff
+	Remember, whenever someone requests a new requirement, the analyst needs to ask, “Is this in scope?”
+ 
+1. One response might be that the proposed requirement is clearly out of scope
+2. Another possibility is that the request obviously lies within the defined project scope. 
+	We can incorporate new in-scope requirements in the current project if they are of high priority relative to the other requirements that were already committed
+	Including new requirements often involves making a decision to defer or cancel other planned requirements, unless you’re willing to extend the project’s duration (impacting cost/schedule)
+3. The third possibility is that the proposed new requirement is out of scope, but it’s such a good idea that the scope should be broadened to accommodate it, with corresponding changes in budget, schedule, and/or staff 
+◦	When a stakeholder wants to add functionality, consider how the suggested changes will contribute to achieving the business objectives. 
+	For example, a business objective to generate maximum revenue from a kiosk implies the early implementation of features that sell more products or services to the customer. 
+Glitzy features that appeal to only a few technology-hungry customers and don’t contribute to the primary business objective shouldn’t have high priority. 
+	If possible, quantify the contribution the feature makes towards the business objectives, so that people can make scoping decisions on the basis of facts rather than emotions (Beatty and Chen 2012)
+	Will a specific feature contribute roughly $1,000, $100,000, or $1,000,000 toward a business objective?
+	We can use quantitative analysis to help determine if adding it is the right business decision. 
+	Assessing the impact of scope changes
+	When the project’s scope increases, the project manager usually will have to renegotiate the planned budget, resources, schedule, and/or staff. Ideally, the original schedule and resources will accommodate a certain amount of change because of thoughtfully included contingency buffers (Wiegers 2007).
+	A common consequence of scope change is that completed activities must be reworked in response to the changes. 
+	Quality often suffers if the allocated resources or time are not increased when new functionality is added. 
+	Documented business requirements make it easier to manage legitimate scope growth as the marketplace or business needs change. 
+	They also help a harried project manager to justify saying “no”—or at least “not yet”—when influential people try to stuff more features into an overly constrained project.
+
+Software Life Cycle Processes
+Requirements Engineering
+	Software Development Life Cycle (SDLC) – A series of steps, or phases, that provides a model for the development and lifecycle management of an application or software
+	Seven phases - Requirement is part of the SDLC
+1. Planning 
+	Planning should clearly define the scope/boundaries and purpose of the application
+	It plots the course and provisions the team to effectively create the software
+	In the Planning phase, project management evaluates the terms of the project. This includes 
+	calculating labor and material costs
+	creating a timetable with target goals - integrated master schedule
+	creating the project’s teams and leadership structure
+	Planning can also include feedback from 
+	Stakeholders - anyone who stands to benefit from the application
+	potential customers, developers, subject matter experts, and sales reps
+ 
+2. Define Requirements 
+	Determine the functional requirements (services, behaviors)
+	For example, an autonomous navigation application would require the ability to detect and avoid obstacles 
+	Determine non-functional requirements (what are they?)
+	Requirements also include defining the resources needed to build the project
+	For example, a team might develop navigation software to navigate a driverless car . The car, GPS, sensing devices, cameras, etc. are requirements in the process.
+ 3. Design
+	The Design phase includes the software architecture that provides a structure of a system derived from the user requirements
+	The design includes several aspects: user interface, platforms, programming, communications, security, etc.
+	Prototyping can be a part of the design phase. -  early version of the software can be made available for demo
+4 . Implementation
+	Software development or coding, actual writing of the program
+	Also includes unit testing, integration testing – finding and fixing errors
+ 5. Testing
+	It’s critical to test an application before making it available to user
+	The process of using the developed system with the intent to find errors.
+	Defects/flaws/errors found at this stage will be sent back to the developer for a fix and have to be re-tested. 
+	This phase is iterative as long as the bugs are fixed to meet the requirements.
+	Much of the testing can be automated. Other testing can only be done in  a simulated production environment for complex deployments
+	Testing should ensure that each function works correctly, and the overall application performs adequately wrt quality attribute requirements (performance, availability, reliability, security, etc.)
+4 . Implementation
+	Software development or coding, actual writing of the program
+	Also includes unit testing, integration testing – finding and fixing errors
+ 5. Testing
+	It’s critical to test an application before making it available to user
+	The process of using the developed system with the intent to find errors.
+	Defects/flaws/errors found at this stage will be sent back to the developer for a fix and have to be re-tested. 
+	This phase is iterative as long as the bugs are fixed to meet the requirements.
+	Much of the testing can be automated. Other testing can only be done in  a simulated production environment for complex deployments
+	Testing should ensure that each function works correctly, and the overall application performs adequately wrt quality attribute requirements (performance, availability, reliability, security, etc.)
+6. Deployment
+	In the deployment phase, the application is made available to users
+	Deployment can be as simple as a payment portal and download link on the vendor website.  It could also be downloading an application on a smartphone.
+	Deployment can also be complex. 
+	For example, upgrading a company-wide database to a newly-developed application. Because there are several other systems used by the database, integrating the upgrade can take more time and effort
+7. Operations and Maintenance
+	At this point, the development cycle is almost finished. The application is done and being used in the field.
+	In this phase, users discover defects/failures/errors that weren’t found during testing. These errors need to be resolved, which can spawn new development cycles.
+	In addition to defect fixes, this phase undertakes development of new features, enhancements etc. 
+	Models like Agile development plan additional features in future releases.
+	There are many software process and life-cycle models, and, of these, many have a variety of permutations:
+	Code-and-Fix Model
+	Waterfall Model
+	V-Shaped
+	Spiral
+	Agile
+	Iterative
+	Scrum
+	This is the earliest method of “fixing” software and is really not a model at all
+	Code and fix has two so-called phases, usually applied in an ad hoc manner
+	– The first phase is to write code
+	– The second phase is to fix it
+	What are the missing steps?
+	Problems include lack of process steps that include
+	Lack of analysis or requirements investigation
+	Lack of trade off for cost or performance purposes
+	Lack of architecture or design activities
+	Lack of integration or testing phases
+	What is the Waterfall model?
+	Each discipline is deemed to be complete when all the appropriate work products for that discipline have been created and signed off 
+	The requirements discipline considered to be complete 
+	when all the requirements have been identified in detail and reviewed. 
+	Then the outputs (e.g.. SRS) from requirements flows into the architecture discipline
+	Defined by Paul Rook in 1980’s
+	Evolved from Waterfall Model but more emphasized on testing
+	Completion of each phase before next phase can begin
+	Process steps are bent upwards
+	Developed by Boehm in 1986
+	Phases are defined cyclically
+	The model is represented by a four-stage model through which the development process spirals
+	Objectives, constraints and alternatives are identified
+	Alternatives are evaluated, risks are identified and resolved
+	The next level of product is developed and verified
+	The next phases are planned
+	The basic differences between the spiral and the waterfall in addition to the four stages, is that the spiral is risk driven
+	Risk processes can also be a problem area if approached without some experience
+	The first is when talking about agile approaches to software development:
+	 moving fast, embracing change, releasing often, getting feedback, etc.
+	The second use of the word relates to the agile mindset and how people work together in agile environments. 
+	This is usually about team dynamics, customer collaboration, and other things associated with creating high performing teams
+	React: If a software team can’t deliver software and keep pace with changes in the environment, the team is not agile 
+	Adapt: If a large, slow-moving organization that rarely changes and takes months to deliver software, is it still be considered “agile” organization by their customer?
+	Defined by four agile values, guided by 12 agile principles, and manifested through many common practices based on needs
+	Rational Unified Process (RUP) 2003 - the granddaddy of all the agile methods
+	Iteration: 
+	A short and set duration of a project
+	Allow to demonstrate incremental value
+	Obtain early and continuous feedback
+	A pass is made through each of disciplines
+	Size of boxes = relative  time spent performing activities/tasks within discipline
+	Each iteration results in 
+	Better understanding of requirements
+	A more robust architecture
+	A more experienced development org
+	A more complete implementation
+	More productive and successful
+	Phases – OpenUP defines four sequential phases: 
+	Inception Phase:
+	Where the business case and objectives for project is established
+	Where the focus is on requirement definitions
+	Elaboration phase:
+	Where the architecture is established
+	Where the architect expends the most effort
+	Construction Phase:
+	Where the remaining requirements are clarified
+	Where development of the system is completed on the baselined architecture
+	Transition Phase:
+	Where the system is deployed in user’s environment for acceptance testing
+	Where project should be to close out by the end 
+	Phases and iterations together provide foundation for an iterative development process 
+	Objectives of each phase are achieved by executing one or more iterations within the phase
+	Each phase concludes with a major milestone and an assessment
+	Example: Inception – milestone: System Requirement Review (SRR), Elaboration- milestone: Critical Design Review (CDR)
+	Successful assessment allows the project to move to the next phase
+	Use SW and Systems Process Engineering Meta-Model Specification (SPEM) standard developed by Object Management Group (OMG), a nonprofit technology standards consortium.
+	SPEM standard is influenced by and supports several existing SW development methods (OpenUP- Unified Process, Rational Unified Process, IBM Unified Method Framework)
+	An effective SW development method should describe who does what, how, and when
+	Roles: The Who (BA)
+	Work products: The What (e.g., Defining Requirements)
+	Tasks: The How (e.g., Collect the stakeholder’s requests)
+	Phases, iterations, and activities: The When
+	Defining the requirements – outline and detail functional requirements as well as non-functional requirements. 
+	Architects focus on the ASRs when deriving the architecture. Solution elements are selected to satisfy the stated requirements.
+	Creating the Logical Architecture – moving from requirements to solution. Describe tasks that produce logical architecture
+	Creating the Physical Architecture – maps logical to physical
+	The iteration starts with the definition of the SW requirements in the Define Requirements activity. 
+	Tasks:
+	Collect Stakeholder Requests : is to gather the requests that various stakeholder place on the system
+	Capture Common Vocabulary : is to ensure that common business and technical terms used by stakeholders are understood and documented
+	Task: Define System Context: is to ensure that the boundary of the system under development is understood and the users and external systems that interacts with the system are identified
+	…
+	Task: Collect Stakeholder Requests 
+	Purpose: is to gather the potential requirements (requests) that various stakeholder place of the system
+	Roles: application/infrastructure architect, business analyst, stakeholder
+	Inputs: Business Process Model, Change request, Vision document
+	Output: Stakeholder Requests
+	Steps: 
+	Identify stakeholders
+	Collect stakeholder requests
+	Prioritize stakeholder requests
+	Notes: Requests are not yet agreed-upon requirements. Often ambiguous, conflicting, or incomplete
+	Task: Capture Common Vocabulary 
+	Purpose: is to ensure that common business and technical terms used by stakeholders are understood and documented
+	Roles: application/infrastructure architect, business analyst, stakeholder
+	Inputs: Business Process Model, stakeholder requests, Vision document
+	Output: Glossary, 
+                   Data Dictionary
+    
+	Steps: 
+	Identify common terms
+	Notes: Each vocabulary term should have a clear and concise definition. All interested parties should agree on these definitions
+	Task: Define System Context
+	Purpose: is to ensure that the boundary of the system under development is understood and the users and external systems that interacts with the system are identified
+	Roles: lead architect, business analyst, stakeholder
+	Inputs: Business Process Model, stakeholder requests, Vision document, enterprise architecture principles
+	Output: System context
+	Steps: 
+	Identify actors (person, external system/device)
+	Identify actor locations
+	Identify data flows between system
+and external actors
+	System Context – example
+Your Tour is a company that 
+connects tour organizers with 
+prospective customers
+	Output: System context
+	Steps: 
+	Identify actors 
+	Customer, sales clerk, 
+	Identify actor locations
+	Identify data flows
+	Task: Outline Functional Requirements
+	Purpose: is to outline the set of functional requirements
+	Roles: application architect, business analyst, stakeholder
+	Inputs: Business Process Model, stakeholder requests, Vision document, enterprise architecture principles, system context
+	Output: Functional requirements
+	Steps: 
+	Identify functional requirements
+	Outline functional requirements
+	Functional Requirements - example
+	Output: Functional requirements
+	Steps: 
+	Identify functional requirements
+	Outline functional requirements
+	Specify tour
+	Browse tours
+	…
+	Task: Outline Non-Functional Requirements
+	Purpose: is to outline the set of non-functional requirements (qualities – performance, reliability, availability or constraints  - business, architecture, development, physical)
+	Roles: application architect, business analyst, stakeholder
+	Inputs: Business Process Model, stakeholder requests, Vision document, enterprise architecture principles, system context
+	Output: Non-Functional (NF)
+   requirements
+	Steps: 
+	Identify non-functional requirements
+	Outline non-functional requirements
+	Task: Prioritize Requirements
+	Purpose: is to prioritize the requirements  so that iterations are planned based on the highest-priority requirements
+	Roles: Lead architect, business analyst, stakeholder, project manager
+	Inputs: Functional/Non-Functional requirements,  Vision document, stakeholder requests
+	Output: Prioritized requirements list
+	Steps: 
+	Prioritize requirements
+	Task: Detail Functional Requirements
+	Purpose: is to define Functional requirements
+	Roles: Application architect, business analyst, stakeholder
+	Inputs: Functional requirements,  stakeholder requests, prioritized requirements list
+	Output: Functional requirements 
+	Steps: 
+	Detail use-case
+	Detail use-case data items
+	Detail system-wide functional requirements
+	Detail functional requirements scenarios
+	Task: Detail Non-Functional Requirements
+	Purpose: is  to define Non-Functional requirements
+    (qualities and constraints)
+	Roles: Application/Infrastructure architect, business analyst, stakeholder
+	Inputs: Non-Functional requirements,  stakeholder requests, prioritized requirements list
+	Output: Non-Functional requirements 
+	Steps: 
+	Detail non-functional requirements 
+	Detail non-functional requirements scenarios
+	Task: Update SW Architecture Document  task
+	Purpose: is to document the architecturally significant requirements in the SW Architecture Document
+	Roles: Lead architect
+	Inputs: Functional Requirements, Non-Functional requirements,  stakeholder requests,  business process model, system context
+	Output: Software Architecture 
+    Document
+	Steps: 
+	Update software architecture document
+	Task: Update SW Architecture Document  task
+	Purpose: is to document the architecturally significant requirements in the SW Architecture Document
+	Roles: Lead architect
+	Inputs: Functional Requirements, Non-Functional requirements,  stakeholder requests,  business process model, system context
+	Output: Software Architecture 
+    Document
+	Steps: 
+	Update software architecture document
+	Task: Update SW Architecture Document  task
+	Purpose: is to document the architecturally significant requirements in the SW Architecture Document
+	Roles: Lead architect
+	Inputs: Functional Requirements, Non-Functional requirements,  stakeholder requests,  business process model, system context
+	Output: Software Architecture 
+    Document
+	Steps: 
+	Update software architecture document
+	Task: Review Requirements with Stakeholders
+	Purpose: is to obtain stakeholder agreement that the requirements, at their current level of elaboration, satisfy the requests
+	Roles: Lead/Application/Infrastructure architect, business analyst, stakeholder, data architect
+	Inputs: Functional Requirements, Non-Functional requirements,  stakeholder requests, prioritized requirements list, business process model, SW architecture document, system context, vision
+	Output: change request, review 
+     record 
+	Steps: 
+	Baseline work products
+	Assemble work products
+	Review work products
+	There are over a dozen agile methodologies 
+	No single right way
+	Can be tailored once a team is experienced
+	Most common 
+	Scrum 
+	Extreme Programming (XP) 
+	Scrum is one of the framework under the Agile software development
+	Scrum emphasizes taking a short step of development, inspecting the resulting product  Did it meet expectations?
+	and the efficacy of current practices How can we work better or make the product better?
+	and then adapting the product goals and process practices Is this still the most valuable feature to deliver at this time?
+	Repeat forever!!!!!
+	Scrum focuses on:
+	Content of an iteration (Sprint)
+	Prioritized requirements to be considered in iteration (Sprint Backlog)
+	A Short daily meeting (a Scrum meeting)
+	Scrum methodology will be discussed in more detail in the next lecture 
+	Characteristics 
+	Focuses on productivity and software quality 
+	Quick releases, with a recommended two-week iteration 
+	Each iteration results in production-ready code 
+	Highly productive, self-organized teams
+	XP Core Practices
+	Small releases – smaller increments mean rapid deployments
+	Pair programming: two programmers- one enters code, the other ensures that code is accurate, periodically switch roles
+	Test-driven Development (TDD) – writes acceptance tests prior to developing code
+	Customer tests – customer describes test criteria
+	Continuous integration – check code into a build several times a day 
+	Simple design – adapt as necessary/revisit as needed
+	The main difference between Scrum and XP is that XP contains many practices that are specifically for programming (TDD, continuous integration, and pair programming)
+	Requirements Engineering 
+Requirements engineering (RE)  refers to the process of formulating, documenting and maintaining software requirements and to the subfield of Software Engineering concerned with this process.
+          Nuseibeh B. and Easterbrook, S. Requirements Engineering: A Roadmap, ICSE 2000 Future of Software  Eng.
+	Goals of RE: 
+	Combine known software requirements into single, coherent view or a single version of the Truth
+	Define as many software requirements as possible
+	Goal = “All”
+	Change happens!
+	Provide inputs to Architectural Design
+	To meet these goals, we need to understand
+	The functions the product must perform
+	The data that will be used/created
+	The relationships between the data and the functions
+	The relationships between the data
+Example: Autonomous Navigation system
+Functions: navigation, steering, route selection, position and velocity sensing. Obstacle avoidance
+Data: position, speed, messages (Position Velocity Messages, Navigation Display Update, Routing Request Message)
+Relationships: [SN-0020] The system shall cease automatic steering upon receipt of a State Change Message indicating “Off”.
+[SN-001] The system shall update its current position and velocity upon receipt of valid Position Velocity Messages
+	The activities involved in RE vary widely, depending on the type of system being developed and the specific practices of the organization(s) involved.
+	 These may include:
+	Requirements inception or requirements elicitation – collecting requirements of a system from users/stakeholders
+	Requirements identification - identifying new requirements
+	Requirements analysis and negotiation - checking requirements and resolving stakeholder conflicts
+	Requirements specification - documenting the requirements in a requirements document (e.g., software requirements spec)
+	Requirements validation - checking that the documented requirements spec and models are consistent and meet stakeholder needs
+	Requirements verification - checking that the designed/built software meets the software requirements spec
+	Requirements management - managing changes to the requirements as the system is developed and put into use
+	These are sometimes presented as chronological stages although, in practice, there is considerable interleaving of these activities.
+	Clear, simple, unambiguous
+	Vague or “minimal” requirements cause Bad Things
+	Always work in customer’s favor. Why?
+	May never finish development
+	A clear & concise requirement … 
+	must consist of a single requirement (“Shall” or “Must”) 
+	should be no more than 30-50 words in length
+	must be easily read and understood by non-technical people 
+	must be unambiguous and not susceptible to multiple interpretations
+	must not contain definitions, descriptions of its use, or reasons for its need
+	must avoid subjective or open-ended terms (e.g., all, any)
+	Are these requirements clear and concise? 
+1. When the user accesses a screen, it shall display on the monitor within 2 seconds. 
+2. All screens shall appear on the monitor quickly. 
+3. The development of the support system shall include infrastructure and development of operating procedures, addition of logistics tools in the areas of maintenance management, configuration management, and technical publications, as well as the entire tool set for system software maintenance and development of new functionalities in the delivered products.
+          Motherhood, vague!
+	Is it Complete?
+	contains all the information that is needed to define the system function, 
+	leaves no one guessing (For how long?, 50 % of what?) 
+	includes measurement units (inches or centimeters?)
+	Examples:
+1. The system shall [0020] cease automatic steering upon receipt of a State Change Message indicating “Off”
+2. The system shall generate commands to the steering actuators and one or more Speed Change Requests to return the vehicle to its previous direction and speed upon receipt of an Obstacle Position Message.
+         Incomplete indication
+         … indicating that the obstacle is no longer a factor.
+	Consistent
+	Requirements agree with each other 
+	Examples: 
+1. The communication network provided on the CSU campus shall be TCP/IPv6 compliant. 
+•	Note: An on-going training program for TCP/IPv6 network needs to be established at the Cal State Fullerton site. 
+2. The campus communication network shall be  IPv6 RFC 791 compliant. 
+•	Note: An on-going training program for IPv6 RFC 791 IP Internet Protocol needs to be established at the Cal State Fullerton site. 
+	Do these refer to the IPv6 RFC or IPv4 RFC?
+RFC 791; (IP Internet Protocol)  IPv4    
+RFC 2460; IPv6
+	Implementable/ Free of Implementation Details
+	Given available time, resources, technology, etc.
+	Examples:
+1. After 3 unsuccessful attempts to log on, the user shall be locked out of the system. 
+2. After 3 unsuccessful attempts to log on, a Java Script routine shall run and lock the user out of the system. 
+	Stated positively
+Avoid to use “shall not” or  “must not” do something
+	Testable/Verifiable 
+	Verification methods: Requirements can be verified by
+	Inspection
+	Demo
+	Test
+	Analysis
+	Examples: 
+1. The user interface shall be menu driven. It shall provide dialog boxes, help screens, radio buttons, dropdown list boxes, and spin buttons for user inputs. 
+2. The system shall be user friendly. 
+	Is this requirement Viable or Feasible? 
+	Examples: 
+1. The replacement control system shall be installed causing no more than 2 days of production disruption. 
+2. The replacement control system shall be installed with no disruption to production. 
+Bad example- This is an unrealistic expectation. 
+	Is this requirement necessary or needed? 
+	A necessary requirement … 
+	is one that must be present to meet system objectives 
+	is absolutely critical for the operation of the system, 
+	leads to a deficiency in the system if it is removed 
+ 
+	Examples 
+1. The desktop PCs for the developers on the project shall be configured with quad core processor, 512 GB of memory, DVD, and dual 21-inch flat screen monitors.
+2. All desktop PCs for the project shall be configured with quad core processor, 512 GB of memory, DVD, and dual 21-inch flat screen monitors.
+          This may not be needed for all PCs for the project
+           Also, avoid use the word “all” in the requirement as it may be open-ended and may not be able to verify.
+	Traceable
+	Upward to origin (e.g., system requirements or A-level )
+	Examples: traceability matrix(“child to parent”) 
+	Traceable (cont.)
+	Downward to design (design items, components), implementation (integration, code/unit/test), and test (test id, test procedures, verification steps)
+	Examples: traceability matrix (“parent-to-children”)
+	Requirements Document
+	Operational Concept 
+	Trace Tables
+	Defines requirements software must meet
+	Single definition of Truth
+	Formal agreement with Customer
+	Modifiable only with approved Change Request
+	Requirements include “shall” or “must”
+	Legal meaning
+	Are given unique identifiers (requirement id)
+	Are formally tested or verified
+	Statements of intent include “will” or “should”
+	Behavior or trait software should exhibit to meet requirements
+	Not formally tested or verified
+	A ConOps is a user-oriented document that describes system characteristics for a proposed system from the users' viewpoint. 
+The ConOps document is used to communicate the overall quantitative and qualitative system characteristics to the user, buyer, developer and other organizational elements (e.g., training, facilities, staffing and maintenance). 
+It is used to describe the user organization(s), mission(s) and organizational objectives from an integrated systems point of view.
+132-1998 – IEEE Guide for Information Technology - System Definition - Concept of Operations (ConOps) Document
+	Describes how customer/users intend to use product 
+	Not how product works
+	Not requirements
+	Scenarios
+	Provides guidance to engineering team
+	Insight into customer/user needs and expectations 
+	Why requirements are the way they are
+	Sets expectations for customer/users
+	Ensures consistency over time
+	For each requirement, it shows:
+	Parent requirement(s)
+	Test Procedure ID, Description
+	Proposed test method
+	Demonstration (D)
+	Analysis (A)
+	Test (T)
+	Inspection (I)
+	Test Level or Test Event
+	Factory Acceptance Test (FAT)
+	SW Functional Qualification Test or Computer SW Configuration Item (CSCI)
+	Site Acceptance Test (SAT)
+	System Test
+	Requirement SI-100 shows:
+	Parent requirement: SSS-9999
+	Test Procedure ID, Description
+	Proposed test method
+	Demonstration (D)
+	Test Level – Test event
+	FAT (Factory Acceptance Test)
+Chapter 30: 
+Tools for requirements engineering 
+	This lecture presents several benefits of using requirements tools and identifies some general capabilities you can expect to find in such products. 
+	Dozens of commercial requirements tools are available. 
+	Requirements tools often aren’t cheap, but the high cost of requirements-related problems can justify your investment in them. 
+	Recognize that the cost of a tool is not simply what you pay for the initial license. The cost also includes annual maintenance fees and periodic upgrades, software installation and configuration, administration, vendor support and consulting, and training for users.
+	 Cloud-based solutions eliminate some of these additional support activities and costs. Your cost-benefit analysis should take into account all of the expenses before you make a purchase decision
+	Requirements development (RD) tools are used by business analysts to work with stakeholders to elicit and document requirements more effectively and more efficiently than with manual methods. 
+	Stakeholders will vary in how they best consume and share information: textually, visually, or audibly. 
+	RD tools can improve stakeholder collaboration by accommodating a variety of communication methods (Frye 2009). 
+	The RD tools include elicitation, prototyping, and modeling tools. Some of the tools in the RD category provide all of these services.
+	 Some of them also offer requirements management capabilities.
+	 In general, RD tools are not as mature as RM tools, and their overall impact on projects is typically less than that of RM tools
+	Elicitation tools include those used for recording notes during elicitation sessions. 
+◦	These enable the BA to quickly organize ideas and to annotate follow-up questions, action items, core terms, and the like.
+◦	 Mind-mapping tools facilitate brainstorming as well as organizing the information produced.
+	Audio pens and other recording tools allow playback of conversations or provide visual reminders of what happened during an elicitation session. 
+◦	Some recording devices also tie the audio directly to the text that was written at the same time, enabling you to hear specific portions of the audio conversation as needed.
+ 
+	Tools that support quality checks, such as scanning a requirements document for vague and ambiguous words, help a BA write clearer requirements. 
+	Some elicitation tools convert requirements from text to auto-generated diagrams. 
+	Certain tools also enable collaborative voting to help a team prioritize requirements
+	Prototyping tools facilitate the creation of work products that range from electronic mock-ups to full application simulations.
+	Simple prototyping tools come with basic shapes and designs to create low-fidelity wireframes (Garmahis 2009).
+	Common applications such as Microsoft PowerPoint can be used to quickly mock up screens and the navigations between them or to annotate existing screen shots. 
+	Sophisticated tools might enable mocked-up functionality that a user can click through to see just how the application would work. 
+	Some prototyping tools support version control, feedback management, requirements linking, and code generation. 
+	Some prototyping tools can show screen mock-ups in a “hand-drawn” style to help manage customer expectations
+	Requirements modeling tools help the BA create diagrams like those described in Chapter 5, “Establishing the business requirements,” Chapter 12, “A picture is worth 1024 words,” and Chapter 13, “Specifying data requirements.” 
+	These tools support the use of standard shapes, notations, and syntax for drawing diagrams according to established conventions. They might provide templates as starting points and examples to help the BA learn more about each model. 
+	Often these tools automatically connect shapes in diagrams to accelerate the drawing process and to help ensure that the diagrams are drawn correctly. 
+	 Many requirements management tools also provide some modeling capability.
+	 The most sophisticated tools (e.g., Rational Rhapsody) allow you to trace individual requirements to models or even to specific elements of models. 
+	For example, analysts can create swimlane or sequence diagrams in the tool, and then after they write requirements, they can trace those requirements back to specific steps in the diagrams.
+	 Keep in mind that no tool will be able to tell you if a requirement or a model element is missing, logically incorrect, or unnecessary. 
+	These tools enable BAs to represent information in multiple ways and to spot certain types of errors and omissions, but they don’t eliminate the need for thinking and peer review
+	An RM tool that stores information in a multiuser database provides a robust solution to the limitations of storing requirements in documents. 
+	Small project teams can get away with just entering the requirements text and several attributes of each requirement. 
+	Larger project teams will benefit from letting users 
+	import requirements from source documents,
+	define attribute values, 
+	filter and display the database contents, 
+	export requirements in various formats, 
+	define traceability links, 
+	connect requirements to items stored in other software development tools. 
+	Requirements management tools have been available for many years. They are both more plentiful and more mature than requirements development tools. 
+	Some tools combine both RD and RM capabilities into a powerful solution aid
+	RM tools often integrate with other tools used in application development.
+ 
+	Earlier, we describe how individual requirements can be linked to objects that might reside in these other tools. 
+◦	For instance, you might be able to trace specific requirements to individual design elements stored in a design modeling tool, or to tests stored in a test management tool
+	Manage versions and changes 
+◦	Your project should define one or more requirements baselines, each identifying a specific collection of requirements allocated to a particular release or iteration. 
+◦	Some RM tools provide baselining functions. The tools also maintain a history of the changes made to each requirement. 
+◦	You can record the rationale behind each change decision and revert to a previous version of a requirement if necessary.
+◦	 Some tools contain a change-proposal system that links change requests directly to the affected requirements
+◦	Store requirements attributes 
+◦	You should record several descriptive attributes for each requirement, as discussed in Chapter 27, “Requirements management practices.” 
+◦	Everyone working on the project must be able to view the attributes, and selected individuals will be permitted to update attribute values. 
+◦	RM tools generate several system-defined attributes, such as the date a requirement was created and its current version number, and they let you define additional attributes of various data types. 
+◦	A Release Number attribute is one way to keep track of the requirements allocated to various releases
+	Track requirements status 
+◦	Collecting requirements in a database lets you know how many discrete requirements you’ve specified for the product. 
+◦	As Chapter 27 described, tracking the status of each requirement during development supports the overall status tracking of the project. 
+◦	Control access 
+◦	RM tools let you define access permissions for individuals or groups of users and share information with a geographically dispersed team through a web interface to the database. 
+◦	Some tools permit multiple users to update the database contents concurrently. 
+◦	Communicate with stakeholders 
+◦	An RM tool serves as a master repository so that all stakeholders work from the same set of requirements. 
+◦	Some tools permit team members to discuss requirements issues electronically through threaded conversations. 
+◦	Automatically triggered email messages notify affected individuals when a new discussion entry is made or when a specific requirement is modified. This is a convenient method for visibly tracking decisions made about requirements. 
+◦	Making the requirements accessible online can minimize document proliferation and version confusion.
+	Reuse requirements 
+◦	Storing requirements in a database facilitates the reuse of them in multiple projects or subprojects.
+◦	Requirements that logically fit into multiple parts of the product description can be stored once and referenced whenever necessary, to avoid duplicating requirements. 
+◦	Chapter 18, “Requirements reuse,” describes important concepts regarding effectively reusing requirements. 
+◦	Track issue status 
+◦	Some RM tools have functionality for tracking open issues and linking each issue to its related requirements. 
+◦	As issues are resolved, it’s easy to determine whether any requirements must be updated. You can also quickly find a history of the issue and its resolution. 
+◦	Tracking issues in a tool enables automatic reporting on the status of the issues. 
+◦	Generate tailored subsets 
+◦	RM tools allow you to extract and view a set of requirements that fits a particular purpose. 
+◦	For example, you might want a report that contains all of the requirements for a specific development iteration, all of the requirements that relate to a particular feature, or a set of requirements that needs to be inspected.
+	Facilitate impact analysis 
+◦	RM tools enable requirements tracing by letting you define links between different types of requirements, between requirements in different subsystems, and between individual requirements and related system components (for example, designs, code modules, tests, and user documentation). 
+◦	These links help you analyze the impact that a proposed change to a specific requirement will have on other system elements. 
+◦	For instance, you might ask to see a list of all the requirements originating from a specific business rule so that you can judge the consequences of a change in that rule. 
+◦	Identify missing and extraneous requirements 
+◦	The tracing functionality in RM tools helps stakeholders identify requirements that are missing, such as user requirements that have no mapped functional requirements. 
+◦	Similarly, they can reveal requirements that cannot be traced back to a reasonable origin, raising the question of whether those requirements are necessary. 
+◦	If a business requirement is cut from scope, then all the requirements that trace from it can also be cut quickly.
+
+
+
